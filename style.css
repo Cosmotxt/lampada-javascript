@@ -1,0 +1,97 @@
+@font-face {
+    font-family: poppins;
+    src: url(./assets/Poppins/Poppins-Regular.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(171, 171, 171);
+    font-family: 'poppins', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#switchImg img {
+    width: 100px;
+    margin-bottom: 100px;
+}
+
+#lampImg img{
+    width: 500px;
+}
+
+h1 {
+    margin-top: 60px;
+    color: black;
+}
+
+#btn {
+    display: none;
+}
+
+#switch {
+    width: 6rem;
+    height: 3rem;
+    background-color: rgb(242, 242, 242);
+    border-radius: 32px;
+}
+
+#button {
+    display: block;
+    cursor: pointer;    
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 35px;
+    background-color: rgb(98, 0, 0);;
+    z-index: 1;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: .4s ease-in-out;
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#button::before {
+    content: 'on';
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    top: 11px;
+    left: 12.5px;
+    font-size: 0;
+}
+    
+#button::after {
+    content: 'off';
+    color: white;
+    position: relative;
+    top: 11.5px;
+    left: 10.5px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#btn:checked + #button {
+    background-color: rgb(24, 156, 24);
+    left: 3.6rem;
+}
+
+#btn:checked + #button::after {
+    font-size: 0;
+}
+
+#btn:checked + #button::before {
+    font-size: 14px;
+}
